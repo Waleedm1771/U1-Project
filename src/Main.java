@@ -75,29 +75,26 @@ public class Main
         int playerScore = 0;
         int gameScore = 0;
         System.out.println("Alright! It's time to play hide and seek!\n");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         System.out.println("Here's how it's gonna work:");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         System.out.println("Im going to hide in one of 3 spots,");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         System.out.println("You will guess where I am 2 times");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         System.out.println("If you guess it right in those 2 tries, you win!");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         System.out.println("Choose the amount of rounds and let's begin!\n");
         System.out.print("Amount of rounds: ");
         int rounds = scan.nextInt();
         System.out.println("\nIt's time to play, don't peek!\n");
         for (int i = 1; i<=rounds; i++) {
-            if (RockPaperScissors.play(i) == 1){
+            if (HideAndSeek.play(i) == 1){
                 playerScore++;
-            } else if (RockPaperScissors.play(i) == 2) {
-                gameScore++;
-            } else if (RockPaperScissors.play(i) == 3) {
-                playerScore++;
-                gameScore++;
             }
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         }
+
+        System.out.println("Final Score: " + playerScore + " out of " + rounds + " games won!");
     }
 }
